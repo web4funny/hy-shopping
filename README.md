@@ -20,3 +20,18 @@ yarn build
 ```
 yarn lint
 ```
+
+## 后端项目 java-shopping
+
+### MySQL
+
+- `MySQL`建库建表`sql`文件路径`src\main\resources\sql`
+
+### 启动项目
+
+- 运行路径`src\main\java\...\ShoppingApplication`
+
+
+
+
+
