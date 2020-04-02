@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hy.shopping.mapper.ShoppingUsersMapper">
+    <resultMap id="usersMap" type="com.hy.shopping.entity.ShoppingUsers">
+        <id column="users_id" property="usersId"></id>
+        <result column="users_name" property="usersName"></result>
+        <result column="users_password" property="usersPassword"></result>
+        <result column="gmt_create" property="gmtCreate"></result>
+        <result column="gmt_modified" property="gmtModified"></result>
+        <result column="bio" property="bio"></result>
+        <association property="usersAvatar" javaType="com.hy.shopping.entity.UsersAvatar">
+            <id column="avatar_id" property="avatarId"></id>
+            <result column="avatar" property="avatar"></result>
+            <result column="users_id" property="usersId"></result>
+        </association>
+    </resultMap>
+    <select id="findByUsersIdShoppingUsers" parameterType="java.lang.Long" resultMap="usersMap">
+        select * from shopping_users, users_avatar where shopping_users.users_id = users_avatar.users_id and shopping_users.users_id = #{usersId};
+    </select>
+</mapper>

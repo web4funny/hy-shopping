@@ -1,13 +1,13 @@
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/shopping?serverTimezone=UTC
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    show-slq: true
-    properties:
-      hibernate:
-        format_sql: true
 server:
   port: 8181
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/shopping?useSSL=false&serverTimezone=UTC
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
