@@ -50,8 +50,8 @@ create table order_form (
 	users_id bigint not null
 );
 
-insert into shopping_users (users_name, users_password, bio) values ('users1', 'users1', '用户3号');
-insert into shopping_users (users_name, users_password, bio) values ('users2', 'users2', '用户3号');
+insert into shopping_users (users_name, users_password, bio) values ('users1', 'users1', '用户1号');
+insert into shopping_users (users_name, users_password, bio) values ('users2', 'users2', '用户2号');
 
 insert into users_avatar (avatar, users_id) values ('images/users-avatar/20190826144852.jpg', 1);
 insert into users_avatar (avatar, users_id) values ('images/users-avatar/20190826144820.jpg', 2);

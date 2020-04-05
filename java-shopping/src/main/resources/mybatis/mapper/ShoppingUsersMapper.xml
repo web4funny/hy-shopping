@@ -15,6 +15,14 @@
         </association>
     </resultMap>
     <select id="findByUsersIdShoppingUsers" parameterType="java.lang.Long" resultMap="usersMap">
-        select * from shopping_users, users_avatar where shopping_users.users_id = users_avatar.users_id and shopping_users.users_id = #{usersId};
+        select * from shopping_users, users_avatar
+        where shopping_users.users_id = users_avatar.users_id
+        and shopping_users.users_id = #{usersId};
+    </select>
+    <select id="findByUsersNameAndUsersPasswordShoppingUsers" parameterType="java.lang.String" resultMap="usersMap">
+        select * from shopping_users
+        inner join users_avatar
+        on shopping_users.users_id = users_avatar.users_id
+        where shopping_users.users_name = #{param1} and shopping_users.users_password = #{param2}
     </select>
 </mapper>
