@@ -1,4 +1,14 @@
 // vue.config.js
+const webpack = require('webpack')
 module.exports = {
-    // 选项...
-  }
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jquery: 'jquery',
+        'window.jQuery': 'jquery',
+        jQuery: 'jquery'
+      })
+    ]
+  },
+}
