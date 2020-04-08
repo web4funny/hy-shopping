@@ -1,7 +1,6 @@
 package com.hy.shopping.controller;
 
 import com.hy.shopping.entity.Goods;
-import com.hy.shopping.service.GoodsService;
 import com.hy.shopping.service.impl.GoodsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
